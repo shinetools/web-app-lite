@@ -10,6 +10,7 @@ const Text = styled.span<TextProps>`
       : theme.colors.grey(
         variant === 'light' ? 0 : (variant === 'secondary' && -1) || -2,
       )};
+  transition: color 0.3s;
 `;
 
 export default Text;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import Text from 'components/Text';
-import { RoundedButton } from 'components/Button';
+import { RoundedButton, RoundedButtonContainer } from 'components/Button';
 import recipients, { Recipient } from './recipients';
 import SectionList from '../../components/SectionList';
 
@@ -11,6 +11,15 @@ const RecipientContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: ${({ theme }) => theme.spacings.m}px;
+
+  :hover ${RoundedButtonContainer} {
+    background-color: ${({ theme }) => theme.colors.ctaBlue(0)};
+    color: white;
+
+    ${Text} {
+      color: white;
+    }
+  }
 `;
 
 const RecipientLine: FC<{ recipient: Recipient }> = ({ recipient }) => {
