@@ -1,19 +1,9 @@
-const { specifiedRules: allGraphQLValidators } = require('graphql');
-const { compose, map, prop, without } = require('ramda');
-// We need to disable these validators because it's how Apollo works
-// See https://github.com/apollographql/eslint-plugin-graphql#selecting-validation-rules
-const allGraphQLValidatorNames = compose(
-  without(['KnownDirectives', 'NoUnusedFragments', 'KnownFragmentNames']),
-  map(prop('name')),
-)(allGraphQLValidators);
-
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'plugin:jest/recommended',
-    'plugin:cypress/recommended',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -25,18 +15,9 @@ module.exports = {
     es6: true,
     jasmine: true,
     'jest/globals': true,
-    'cypress/globals': true,
   },
 
-  plugins: [
-    'react',
-    'react-hooks',
-    '@shinetools/eslint-plugin-shine',
-    '@typescript-eslint',
-    'graphql',
-    'jest',
-    'cypress',
-  ],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'jest'],
 
   globals: {
     cancelAnimationFrame: true,
@@ -72,8 +53,6 @@ module.exports = {
     ],
     'global-require': 0,
     'jsx-a11y/accessible-emoji': 0,
-    '@shinetools/shine/no-native-text-component': 2,
-    '@shinetools/shine/no-several-button-styles': 2,
     'react/sort-comp': 0,
     'react/jsx-sort-props': [
       2,
@@ -109,31 +88,6 @@ module.exports = {
           'webpack/**',
           'src/**/testing/**',
         ],
-      },
-    ],
-    'graphql/template-strings': [
-      'error',
-      {
-        env: 'literal',
-        validators: allGraphQLValidatorNames,
-      },
-    ],
-    'graphql/no-deprecated-fields': [
-      'error',
-      {
-        env: 'literal',
-      },
-    ],
-    'graphql/capitalized-type-name': [
-      'error',
-      {
-        env: 'literal',
-      },
-    ],
-    'graphql/named-operations': [
-      'error',
-      {
-        env: 'literal',
       },
     ],
   },

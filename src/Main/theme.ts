@@ -1,4 +1,5 @@
 import { mapObjIndexed } from 'ramda';
+
 const mapColorVariationsToColorScale = (array: string[]) => (index: number) =>
   array[index + 2];
 
@@ -178,6 +179,8 @@ const theme = {
           return 18;
         case 2:
           return 22;
+        case 3:
+          return 24;
         case 0:
         default:
           return 15;
