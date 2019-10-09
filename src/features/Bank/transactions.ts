@@ -1,4 +1,14 @@
-const transactions = [
+export interface Transaction {
+  receiptId: string;
+  transactionAt: number;
+  type: string;
+  value: number;
+  paymentCurrency: string;
+
+  [x: string]: any;
+}
+
+const transactions: Transaction[] = [
   {
     transactionId: 'e9e72d73-aa28-4aeb-8e54-787494835822',
     createdAt: 1570462971760,
@@ -90,7 +100,7 @@ const transactions = [
     paymentMethod: 'CARD',
     paymentProvider: 'TREEZOR',
     providerTransactionId: 'payout_1234',
-    receiptId: '',
+    receiptId: '1234',
     status: 'VALIDATED',
     title: "Mc Donald's PARIS 15",
     titleLatinised: "mc donald's paris 15",
@@ -169,7 +179,7 @@ const transactions = [
   },
   {
     transactionId: '9acf350d-fceb-4b12-983c-6e02fbd60534',
-    createdAt: 1570462981135,
+    createdAt: 1470462981135,
     currency: 'EUR',
     paymentMethod: 'CARD',
     paymentProvider: 'TREEZOR',
@@ -183,7 +193,7 @@ const transactions = [
     updatedAt: 1570462981135,
     value: 121.25,
     bankTransferId: '',
-    transactionAt: 1570462970000,
+    transactionAt: 1570361970000,
     fee: 0,
     invoiceId: '',
     transferPayinSenderName: '',
