@@ -1,4 +1,12 @@
-const recipients = [
+export interface Recipient {
+  iban: string;
+  label: string;
+  bankTransferRecipientId: string;
+
+  [x: string]: any;
+}
+
+const recipients: Recipient[] = [
   {
     bankTransferRecipientId: 'c34c2842-0164-404b-aab7-8a031ca2738e',
     createdAt: 1570632852155,

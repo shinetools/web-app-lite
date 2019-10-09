@@ -1,7 +1,7 @@
 interface Item {
   content: any;
   id: string;
-  selected: boolean;
+  selected?: boolean;
   href: string;
 }
 

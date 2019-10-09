@@ -13,7 +13,7 @@ const TitleContainer = styled.div`
   padding-left: ${({ theme }) => theme.spacings.m}px;
 `;
 
-const Item = styled(Link)<{ selected: boolean }>`
+const Item = styled(Link)<{ selected?: boolean }>`
   display: block;
   border-radius: 8px;
   margin-bottom: ${({ theme }) => theme.spacings.s}px;
