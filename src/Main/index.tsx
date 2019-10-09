@@ -8,6 +8,7 @@ import {
 import { ThemeProvider } from 'styled-components';
 import Sidebar from 'components/Sidebar';
 import Bank from 'features/Bank';
+import Payments from 'features/Payments';
 import {
   GlobalStyle,
   AppContainer,
@@ -24,7 +25,8 @@ const Main: React.FunctionComponent = () => (
         <Router>
           <Sidebar />
           <Switch>
-            <Route component={Bank} path="/bank/:transactionId" />
+            <Route component={Bank} path="/bank/:transactionId?" />
+            <Route component={Payments} path="/payments" />
             <Redirect to="/bank" />
           </Switch>
         </Router>
