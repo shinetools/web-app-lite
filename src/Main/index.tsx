@@ -6,6 +6,8 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import Sidebar from 'components/Sidebar';
+import Bank from 'features/Bank';
 import {
   GlobalStyle,
   AppContainer,
@@ -13,8 +15,6 @@ import {
   AlertsContainer,
 } from './styles';
 import theme from './theme';
-import Sidebar from 'components/Sidebar';
-import Bank from 'features/Bank';
 
 const Main: React.FunctionComponent = () => (
   <ThemeProvider theme={theme}>
