@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 import transactions, { Transaction } from './transactions';
@@ -26,6 +26,8 @@ const groupTransactions = (transacs: Transaction[]) => {
 };
 
 const Bank: FC = () => {
+  const [selectedTransactionId, setSelectedTransactionId] = useState('');
+
   const groupedTransactions = groupTransactions(transactions);
   const sections = Object.keys(groupedTransactions)
     .sort()
@@ -37,7 +39,8 @@ const Bank: FC = () => {
         id: date,
         title: moment(date).format('DD/MM/YYYY'),
         items: dateTransactions.map(transaction => ({
-          id: transaction.id,
+          id: transaction.transactionId,
+          selected: selectedTransactionId === transaction.transactionId,
           content: <TransactionLine transaction={transaction} />,
         })),
       };
@@ -45,7 +48,10 @@ const Bank: FC = () => {
 
   return (
     <Container>
-      <SectionList sections={sections} />
+      <SectionList
+        onSelectItem={item => setSelectedTransactionId(item.id)}
+        sections={sections}
+      />
     </Container>
   );
 };

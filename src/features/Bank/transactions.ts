@@ -4,6 +4,7 @@ export interface Transaction {
   type: string;
   value: number;
   paymentCurrency: string;
+  transactionId: string;
 
   [x: string]: any;
 }
