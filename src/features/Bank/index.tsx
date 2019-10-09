@@ -1,5 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
+import { useParams } from 'react-router-dom';
 import moment from 'moment';
 import transactions, { Transaction } from './transactions';
 import SectionList from '../../components/SectionList';
@@ -26,7 +27,7 @@ const groupTransactions = (transacs: Transaction[]) => {
 };
 
 const Bank: FC = () => {
-  const [selectedTransactionId, setSelectedTransactionId] = useState('');
+  const { transactionId } = useParams();
 
   const groupedTransactions = groupTransactions(transactions);
   const sections = Object.keys(groupedTransactions)
@@ -40,7 +41,8 @@ const Bank: FC = () => {
         title: moment(date).format('DD/MM/YYYY'),
         items: dateTransactions.map(transaction => ({
           id: transaction.transactionId,
-          selected: selectedTransactionId === transaction.transactionId,
+          href: `/bank/${transaction.transactionId}`,
+          selected: transactionId === transaction.transactionId,
           content: <TransactionLine transaction={transaction} />,
         })),
       };
@@ -48,10 +50,7 @@ const Bank: FC = () => {
 
   return (
     <Container>
-      <SectionList
-        onSelectItem={item => setSelectedTransactionId(item.id)}
-        sections={sections}
-      />
+      <SectionList sections={sections} />
     </Container>
   );
 };

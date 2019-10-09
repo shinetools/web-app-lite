@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import Text from 'components/Text';
+import { Link } from 'react-router-dom';
 import { SectionListProps } from './types';
 
 const Section = styled.div`
@@ -12,7 +13,8 @@ const TitleContainer = styled.div`
   padding-left: ${({ theme }) => theme.spacings.m}px;
 `;
 
-const Item = styled.div<{ selected: boolean }>`
+const Item = styled(Link)<{ selected: boolean }>`
+  display: block;
   border-radius: 8px;
   margin-bottom: ${({ theme }) => theme.spacings.s}px;
   ${({ selected }) =>
@@ -26,7 +28,7 @@ const Item = styled.div<{ selected: boolean }>`
   }
 `;
 
-const SectionList: FC<SectionListProps> = ({ sections, onSelectItem }) => {
+const SectionList: FC<SectionListProps> = ({ sections }) => {
   return (
     <>
       {sections.map(section => {
@@ -37,11 +39,7 @@ const SectionList: FC<SectionListProps> = ({ sections, onSelectItem }) => {
             </TitleContainer>
             {section.items.map(item => {
               return (
-                <Item
-                  key={item.id}
-                  onClick={() => onSelectItem(item)}
-                  selected={item.selected}
-                >
+                <Item key={item.id} selected={item.selected} to={item.href}>
                   {item.content}
                 </Item>
               );

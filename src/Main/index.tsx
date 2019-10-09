@@ -24,7 +24,7 @@ const Main: React.FunctionComponent = () => (
         <Router>
           <Sidebar />
           <Switch>
-            <Route component={Bank} path="/bank" />
+            <Route component={Bank} path="/bank/:transactionId" />
             <Redirect to="/bank" />
           </Switch>
         </Router>
