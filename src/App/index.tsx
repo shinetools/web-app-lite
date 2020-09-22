@@ -1,24 +1,26 @@
-import React, { Fragment } from 'react';
+import "@shinetools/sunbeams/web/fonts/Rubik/Rubik.css";
+import "@shinetools/sunbeams/web/fonts/Icons.css";
+
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import Sidebar from 'components/Sidebar';
-import Bank from 'features/Bank';
+} from "react-router-dom";
+import { ThemeProvider } from "@shinetools/sunbeams/web";
+import Sidebar from "../components/Sidebar";
+import Bank from "../features/Bank";
 import {
   GlobalStyle,
   AppContainer,
   ModalsContainer,
   AlertsContainer,
-} from './styles';
-import theme from './theme';
+} from "./styles";
 
 const Main: React.FunctionComponent = () => (
-  <ThemeProvider theme={theme}>
-    <Fragment>
+  <ThemeProvider>
+    <>
       <GlobalStyle />
       <AppContainer>
         <Router>
@@ -31,7 +33,7 @@ const Main: React.FunctionComponent = () => (
       </AppContainer>
       <ModalsContainer id="modal" />
       <AlertsContainer id="alert" />
-    </Fragment>
+    </>
   </ThemeProvider>
 );
 
