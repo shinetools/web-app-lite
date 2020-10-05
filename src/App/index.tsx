@@ -1,6 +1,3 @@
-import "@shinetools/sunbeams/web/fonts/Rubik/Rubik.css";
-import "@shinetools/sunbeams/web/fonts/Icons.css";
-
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -8,7 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { ThemeProvider } from "@shinetools/sunbeams/web";
+import { ThemeProvider } from "styled-components";
 import Sidebar from "../components/Sidebar";
 import Bank from "../features/Bank";
 import {
@@ -17,9 +14,10 @@ import {
   ModalsContainer,
   AlertsContainer,
 } from "./styles";
+import theme from "../common/theme";
 
 const Main: React.FunctionComponent = () => (
-  <ThemeProvider>
+  <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
       <AppContainer>
