@@ -16,18 +16,18 @@ const BASE_COLORS = {
   ],
   ctaBlue: [
     "#27349B",
-    "#283AC7", // primaryActionColorActive
-    "#4B5FFA", // primaryActionColor
-    "#A8BAFF", // primaryActionColorInactive
-    "#D7E0FD", // primaryActionColorDisabled
-    "#EBF0FF", // backgroundActionableActive
-    "#F6F6FE", // backgroundActionable
-    "#FCFCFE", // backgroundActionableDisabled
+    "#283AC7",
+    "#4B5FFA",
+    "#A8BAFF",
+    "#D7E0FD",
+    "#EBF0FF",
+    "#F6F6FE",
+    "#FCFCFE",
   ],
   darkBlue: [
     "#1E4BB3",
     "#326CD8",
-    "#458FFF", // logoBlueDarkColor
+    "#458FFF",
     "#A2C7FF",
     "#D4E5FF",
     "#E9F2FF",
@@ -45,23 +45,23 @@ const BASE_COLORS = {
     "#FBFFFB",
   ],
   grey: [
-    "#17294D", // textPrimaryColor
-    "#455980", // textSecondaryColor
-    "#8090B2", // textLightColor
-    "#B1BACC", // textLighterColor
+    "#17294D",
+    "#455980",
+    "#8090B2",
+    "#B1BACC",
     "#EDEEF1",
     "#F7F8F9",
     "#FAFBFC",
-    "#FCFDFE", // backgroundLightGray
+    "#FCFDFE",
   ],
   lightBlue: [
     "#0367A6",
     "#1D8DD2",
-    "#5EC1FF", // logoBlueColor
+    "#5EC1FF",
     "#A8DEFF",
     "#D2EEFF",
-    "#E8F6FF", // backgroundLightBlueColor
-    "#F5FBFF", // backgroundLighterBlueColor
+    "#E8F6FF",
+    "#F5FBFF",
     "#FAFDFF",
   ],
   magenta: [
@@ -76,21 +76,21 @@ const BASE_COLORS = {
   ],
   orange: [
     "#C26604",
-    "#E38016", // textOrangeColor
+    "#E38016",
     "#FFA238",
     "#FFD39F",
     "#FFE8CA",
-    "#FFF4E6", // backgroundOrangeColor
+    "#FFF4E6",
     "#FFF9F4",
     "#FFFDFB",
   ],
   pink: [
     "#B31E50",
     "#DA2B65",
-    "#F7578C", // logoPinkColor
+    "#F7578C",
     "#FBABC6",
     "#FDD7E3",
-    "#FFF0F5", // backgroundPinkColor
+    "#FFF0F5",
     "#FFF7F9",
     "#FFFCFD",
   ],
@@ -126,21 +126,21 @@ const BASE_COLORS = {
   ],
   red: [
     "#B52430",
-    "#DB394C", // errorColor
-    "#F05B60", // logoRedColor
-    "#F7ADAF", // errorColorFaded
+    "#DB394C",
+    "#F05B60",
+    "#F7ADAF",
     "#FBD6D7",
-    "#FDEFF0", // backgroundRedColor
+    "#FDEFF0",
     "#FEF7F8",
     "#FFFCFC",
   ],
   turquoise: [
     "#068E70",
-    "#08C79C", // successColor
-    "#11FAC7", // logoTurquoiseColor
-    "#99FBE6", // successColorFaded
+    "#08C79C",
+    "#11FAC7",
+    "#99FBE6",
     "#C3FCEF",
-    "#E7FDF9", // backgroundTurquoiseColor
+    "#E7FDF9",
     "#F3FEFB",
     "#FAFFFD",
   ],
@@ -156,11 +156,11 @@ const BASE_COLORS = {
   ],
   yellow: [
     "#C38A04",
-    "#F0C014", // warningColor
-    "#FFD947", // logoYellowColor
-    "#FFEB9F", // warningColorFaded
+    "#F0C014",
+    "#FFD947",
+    "#FFEB9F",
     "#FFF3C2",
-    "#FFF8DF", // backgroundYellowColor
+    "#FFF8DF",
     "#FFFCF0",
     "#FFFEF9",
   ],
