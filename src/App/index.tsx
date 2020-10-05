@@ -1,24 +1,24 @@
-import React, { Fragment } from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import Sidebar from 'components/Sidebar';
-import Bank from 'features/Bank';
+} from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import Sidebar from "../components/Sidebar";
+import Bank from "../features/Bank";
 import {
   GlobalStyle,
   AppContainer,
   ModalsContainer,
   AlertsContainer,
-} from './styles';
-import theme from './theme';
+} from "./styles";
+import theme from "../common/theme";
 
 const Main: React.FunctionComponent = () => (
   <ThemeProvider theme={theme}>
-    <Fragment>
+    <>
       <GlobalStyle />
       <AppContainer>
         <Router>
@@ -31,7 +31,7 @@ const Main: React.FunctionComponent = () => (
       </AppContainer>
       <ModalsContainer id="modal" />
       <AlertsContainer id="alert" />
-    </Fragment>
+    </>
   </ThemeProvider>
 );
 

@@ -1,6 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import IconsTTF from 'assets/fonts/Icons.ttf';
-import zIndices from 'common/zIndices';
+import styled, { createGlobalStyle } from "styled-components";
+import zIndices from "../common/zIndices";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -19,11 +18,6 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
     }
   }
-  @import url(https://fonts.googleapis.com/css?family=Rubik:400,500);
-  @font-face {
-    font-family: 'Icons';
-    src: url('${IconsTTF}') format('truetype'); /* Safari, Android, iOS */
-  }
 
   body {
     font: 16px Rubik;
@@ -31,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #FFFFFF;
     height: 100%;
   }
+
   input {
     color: inherit;
   }

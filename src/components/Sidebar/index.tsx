@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'components/Link';
-import styled from 'styled-components';
-import Icon from 'components/Icon';
-import { Wrapper, NavMenu } from './styles';
+import React from "react";
+import Link from "../Link";
+import styled from "styled-components";
+import { Wrapper, NavMenu } from "./styles";
+import Icon from "../Icon";
 
 const Label = styled.span`
-  margin-left: ${({ theme }) => theme.spacings.s}px;
+  margin-left: ${({ theme }) => theme.spacings.abs8}px;
 `;
 
 const Sidebar = () => (

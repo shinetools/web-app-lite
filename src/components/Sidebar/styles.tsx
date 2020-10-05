@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: linear-gradient(
@@ -17,10 +17,11 @@ export const Wrapper = styled.div`
 `;
 
 export const NavMenu = styled.div`
-  padding: ${({ theme }) => `${theme.spacings.xxl}px ${theme.spacings.m}px 0`};
+  padding: ${({ theme }) =>
+    `${theme.spacings.abs32}px ${theme.spacings.abs16}px 0`};
   display: flex;
   flex-direction: column;
   > * {
-    margin-bottom: ${({ theme }) => theme.spacings.l}px;
+    margin-bottom: ${({ theme }) => theme.spacings.abs16}px;
   }
 `;
