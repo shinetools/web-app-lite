@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import IcomoonIcon from "icomoon-react";
+import IcoMoon from "react-icomoon";
 import icons from "./icons.json";
 import theme from "../../common/theme";
 
@@ -10,11 +10,10 @@ const Icon: FC<{ name: string; size?: -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 }> = ({
   name,
   ...props
 }) => (
-  <IcomoonIcon
+  <IcoMoon
     iconSet={icons}
     icon={name}
     size={theme.texts.size(size + 1)}
-    color="currentColor"
     style={iconStyle}
     {...props}
   />
