@@ -18,7 +18,8 @@ const getColorVariant = (variant?: string): number => {
 
 const Text = styled.span<TextProps>`
   color: ${({ variant, theme }) => theme.colors.grey(getColorVariant(variant))};
-  font-size: ${({ theme, size = 0 }) => theme.texts.size(size)}px;
+  line-height: ${({ size = 0, theme }) => theme.texts.lineHeight(size)}px;
+  font-size: ${({ size = 0, theme }) => theme.texts.size(size)}px;
   font-weight: ${({ weight = "regular" }) => (weight === "medium" ? 500 : 400)};
 `;
 
