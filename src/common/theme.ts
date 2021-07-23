@@ -169,21 +169,50 @@ const BASE_COLORS = {
 const theme = {
   colors: mapObjIndexed(mapColorVariationsToColorScale, BASE_COLORS),
   texts: {
+    lineHeight(input: number) {
+      switch (input) {
+        case -2:
+          return 17;
+        case -1:
+          return 18;
+        case 1:
+          return 26;
+        case 2:
+          return 30;
+        case 3:
+          return 36;
+        case 4:
+          return 40;
+        case 5:
+          return 48;
+        case 6:
+          return 58;
+        case 0:
+        default:
+          return 21;
+      }
+    },
     size(input: number) {
       switch (input) {
         case -2:
-          return 11;
-        case -1:
           return 13;
+        case -1:
+          return 15;
         case 1:
           return 18;
         case 2:
           return 22;
         case 3:
-          return 24;
+          return 26;
+        case 4:
+          return 31;
+        case 5:
+          return 38;
+        case 6:
+          return 42;
         case 0:
         default:
-          return 15;
+          return 16;
       }
     },
   },
@@ -194,6 +223,7 @@ const theme = {
     abs16: 16,
     abs24: 24,
     abs32: 32,
+    abs40: 40,
     abs48: 48,
     abs64: 64,
   },
