@@ -19,6 +19,10 @@ const Sidebar = () => (
         <Icon name="transfer" />
         <Label>Paiements</Label>
       </Link>
+      <Link to="/styleguide">
+        <Icon name="smile" />
+        <Label>Styleguide</Label>
+      </Link>
     </NavMenu>
   </Wrapper>
 );

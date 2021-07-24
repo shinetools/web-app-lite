@@ -15,6 +15,7 @@ import {
   AlertsContainer,
 } from "./styles";
 import theme from "../common/theme";
+import Styleguide from "../features/Styleguide";
 
 const Main: React.FunctionComponent = () => (
   <ThemeProvider theme={theme}>
@@ -25,6 +26,7 @@ const Main: React.FunctionComponent = () => (
           <Sidebar />
           <Switch>
             <Route component={Bank} path="/bank" />
+            <Route component={Styleguide} path="/styleguide" />
             <Redirect to="/bank" />
           </Switch>
         </Router>
