@@ -1,5 +1,11 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
+import { Title, Subtitle } from './styles';
 
-const Bank: FC = () => <div>Vue banque</div>;
+const Bank: FC = () => (
+  <div>
+    <Title>Bank</Title>
+    <Subtitle>Subtitle</Subtitle>
+  </div>
+);
 
 export default Bank;
