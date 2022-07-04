@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from "styled-components";
-import zIndices from "../common/zIndices";
+import styled, { createGlobalStyle } from 'styled-components';
+import zIndices from '../common/zIndices';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -75,17 +75,4 @@ export const AlertsContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-`;
-
-export const FullscreenContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  padding: ${({ theme }): number => theme.spacings.xl}px;
 `;
